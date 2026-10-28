@@ -340,7 +340,7 @@ class PainelHabitos:
             bgcolor=COR_SUPERFICIE,
             border=ft.border(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Row(
-                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                vertical_alignment=ft.CrossAxisAlignment.center,
                 controls=[
                     ft.IconButton(
                         icon=ft.icons.ARROW_BACK_IOS_NEW,
@@ -500,7 +500,7 @@ class PainelHabitos:
                 border_radius=12,
                 bgcolor=COR_ACCENT if selecionado else COR_SUPERFICIE_2,
                 border=ft.border.all(1, COR_ACCENT_HOVER if selecionado else COR_BORDA),
-                alignment=ft.alignment.CENTER,
+                alignment=ft.alignment.center,
                 content=ft.Icon(
                     icone,
                     color="#ffffff" if selecionado else COR_TEXTO_SEC,
@@ -596,7 +596,7 @@ class PainelHabitos:
             self.coluna_habitos.controls.append(
                 ft.Container(
                     padding=30,
-                    alignment=ft.Alignment.CENTER,
+                    alignment=ft.alignment.center,
                     content=ft.Text(
                         "Nenhum hábito cadastrado ainda.",
                         color=COR_TEXTO_SEC,
@@ -628,7 +628,7 @@ class PainelHabitos:
             border_radius=14,
             animate=ft.Animation(180, ft.AnimationCurve.EASE_OUT),
             content=ft.Row(
-                vertical_alignment=ft.CrossAxisAlignment.CENTER,
+                vertical_alignment=ft.CrossAxisAlignment.center,
                 spacing=12,
                 controls=[
                     # Bloco visual do ícone.
@@ -637,7 +637,7 @@ class PainelHabitos:
                         height=42,
                         border_radius=10,
                         bgcolor=COR_SUCESSO if habito.concluido else COR_SUPERFICIE_2,
-                        alignment=ft.Alignment.CENTER,
+                        alignment=ft.alignment.center,
                         content=ft.Icon(
                             habito.icone,
                             color="#ffffff" if habito.concluido else COR_TEXTO_SEC,
@@ -690,7 +690,7 @@ class PainelHabitos:
                             1.5,
                             COR_SUCESSO if habito.concluido else COR_TEXTO_SEC,
                         ),
-                        alignment=ft.alignment.CENTER,
+                        alignment=ft.alignment.center,
                         on_click=lambda e, h=habito: self._alternar_conclusao(h),
                         animate=ft.Animation(150, ft.AnimationCurve.EASE_OUT),
                         content=ft.Icon(
