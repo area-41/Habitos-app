@@ -58,19 +58,19 @@ COR_TEXTO_MUTED  = "#a5b1c2"  # texto de dica/placeholder
 # ----------------------------------------------------------
 # ÍCONES DISPONÍVEIS
 # ----------------------------------------------------------
-# O Flet já fornece vários ícones prontos por meio de ft.Icons.
+# O Flet já fornece vários ícones prontos por meio de ft.icons.
 # Aqui criamos uma lista com os ícones que o usuário poderá
 # escolher ao cadastrar um novo hábito.
 # ----------------------------------------------------------
 ICONES_DISPONIVEIS = [
-    ft.Icons.WATER_DROP_OUTLINED,
-    ft.Icons.FITNESS_CENTER,
-    ft.Icons.MENU_BOOK_OUTLINED,
-    ft.Icons.BEDTIME_OUTLINED,
-    ft.Icons.SELF_IMPROVEMENT,
-    ft.Icons.DIRECTIONS_RUN,
-    ft.Icons.CODE,
-    ft.Icons.RESTAURANT_OUTLINED,
+    ft.icons.WATER_DROP_OUTLINED,
+    ft.icons.FITNESS_CENTER,
+    ft.icons.MENU_BOOK_OUTLINED,
+    ft.icons.BEDTIME_OUTLINED,
+    ft.icons.SELF_IMPROVEMENT,
+    ft.icons.DIRECTIONS_RUN,
+    ft.icons.CODE,
+    ft.icons.RESTAURANT_OUTLINED,
 ]
 
 
@@ -126,10 +126,10 @@ class PainelHabitos:
         # Em aplicações interativas, o estado é a memória da interface.
         # Aqui ele guarda a lista de hábitos exibidos na tela.
         self.estado = EstadoApp(habitos=[
-            Habito("Beber 2L de água", ft.Icons.WATER_DROP_OUTLINED, sequencia=4),
-            Habito("Treinar 30 minutos", ft.Icons.FITNESS_CENTER, sequencia=2),
-            Habito("Ler 10 páginas", ft.Icons.MENU_BOOK_OUTLINED, sequencia=7),
-            Habito("Dormir antes da meia-noite", ft.Icons.BEDTIME_OUTLINED, sequencia=1),
+            Habito("Beber 2L de água", ft.icons.WATER_DROP_OUTLINED, sequencia=4),
+            Habito("Treinar 30 minutos", ft.icons.FITNESS_CENTER, sequencia=2),
+            Habito("Ler 10 páginas", ft.icons.MENU_BOOK_OUTLINED, sequencia=7),
+            Habito("Dormir antes da meia-noite", ft.icons.BEDTIME_OUTLINED, sequencia=1),
         ])
 
         # Ícone selecionado no formulário de novo hábito.
@@ -343,7 +343,7 @@ class PainelHabitos:
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.IconButton(
-                        icon=ft.Icons.ARROW_BACK_IOS_NEW,
+                        icon=ft.icons.ARROW_BACK_IOS_NEW,
                         icon_color=COR_TEXTO,
                         icon_size=18,
                         # on_click recebe uma função que será executada
@@ -674,7 +674,7 @@ class PainelHabitos:
                     ),
                     # Botão de excluir.
                     ft.IconButton(
-                        icon=ft.Icons.DELETE_OUTLINE,
+                        icon=ft.icons.DELETE_OUTLINE,
                         icon_color=COR_TEXTO_SEC,
                         icon_size=18,
                         tooltip="Excluir hábito",
@@ -694,7 +694,7 @@ class PainelHabitos:
                         on_click=lambda e, h=habito: self._alternar_conclusao(h),
                         animate=ft.Animation(150, ft.AnimationCurve.EASE_OUT),
                         content=ft.Icon(
-                            ft.Icons.CHECK,
+                            ft.icons.CHECK,
                             color="#ffffff",
                             size=16,
                         ) if habito.concluido else None,
