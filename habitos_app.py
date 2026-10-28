@@ -289,7 +289,7 @@ class PainelHabitos:
         return ft.Container(
             padding=ft.Padding(left=24, right=24, top=28, bottom=20),
             bgcolor=COR_SUPERFICIE,
-            border=ft.Border(bottom=ft.BorderSide(1, COR_BORDA)),
+            border=ft.border(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Column(
                 spacing=4,
                 controls=[
@@ -316,7 +316,7 @@ class PainelHabitos:
                             ),
                             ft.Container(
                                 bgcolor="#1f6feb2e",
-                                border=ft.Border.all(1, COR_ACCENT_HOVER),
+                                border=ft.border.all(1, COR_ACCENT_HOVER),
                                 border_radius=999,
                                 padding=ft.Padding(left=12, right=12, top=6, bottom=6),
                                 content=ft.Text(
@@ -338,7 +338,7 @@ class PainelHabitos:
         return ft.Container(
             padding=ft.Padding(left=16, right=24, top=24, bottom=20),
             bgcolor=COR_SUPERFICIE,
-            border=ft.Border(bottom=ft.BorderSide(1, COR_BORDA)),
+            border=ft.border(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Row(
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
@@ -416,7 +416,7 @@ class PainelHabitos:
         return ft.Container(
             padding=20,
             bgcolor=COR_SUPERFICIE,
-            border=ft.Border.all(1, COR_BORDA),
+            border=ft.border.all(1, COR_BORDA),
             border_radius=16,
             content=ft.Column(
                 spacing=10,
@@ -499,8 +499,8 @@ class PainelHabitos:
                 height=52,
                 border_radius=12,
                 bgcolor=COR_ACCENT if selecionado else COR_SUPERFICIE_2,
-                border=ft.Border.all(1, COR_ACCENT_HOVER if selecionado else COR_BORDA),
-                alignment=ft.Alignment.CENTER,
+                border=ft.border.all(1, COR_ACCENT_HOVER if selecionado else COR_BORDA),
+                alignment=ft.alignment.CENTER,
                 content=ft.Icon(
                     icone,
                     color="#ffffff" if selecionado else COR_TEXTO_SEC,
@@ -529,7 +529,7 @@ class PainelHabitos:
         for ic, container in self._containers_icone.items():
             selecionado = ic == icone
             container.bgcolor = COR_ACCENT if selecionado else COR_SUPERFICIE_2
-            container.border = ft.Border.all(1, COR_ACCENT_HOVER if selecionado else COR_BORDA)
+            container.border = ft.border.all(1, COR_ACCENT_HOVER if selecionado else COR_BORDA)
             container.content.color = "#ffffff" if selecionado else COR_TEXTO_SEC
 
         self.page.update()
@@ -624,7 +624,7 @@ class PainelHabitos:
         return ft.Container(
             padding=ft.Padding(left=16, right=16, top=14, bottom=14),
             bgcolor=COR_SUCESSO_BG if habito.concluido else COR_SUPERFICIE,
-            border=ft.Border.all(1, COR_SUCESSO if habito.concluido else COR_BORDA),
+            border=ft.border.all(1, COR_SUCESSO if habito.concluido else COR_BORDA),
             border_radius=14,
             animate=ft.Animation(180, ft.AnimationCurve.EASE_OUT),
             content=ft.Row(
@@ -686,11 +686,11 @@ class PainelHabitos:
                         height=30,
                         border_radius=999,
                         bgcolor=COR_SUCESSO if habito.concluido else "transparent",
-                        border=ft.Border.all(
+                        border=ft.border.all(
                             1.5,
                             COR_SUCESSO if habito.concluido else COR_TEXTO_SEC,
                         ),
-                        alignment=ft.Alignment.CENTER,
+                        alignment=ft.alignment.CENTER,
                         on_click=lambda e, h=habito: self._alternar_conclusao(h),
                         animate=ft.Animation(150, ft.AnimationCurve.EASE_OUT),
                         content=ft.Icon(
