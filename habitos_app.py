@@ -289,7 +289,7 @@ class PainelHabitos:
         return ft.Container(
             padding=ft.Padding(left=24, right=24, top=28, bottom=20),
             bgcolor=COR_SUPERFICIE,
-            border=ft.border.only(bottom=ft.border_side.BorderSide(1, COR_BORDA)),
+            border=ft.border.only(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Column(
                 spacing=4,
                 controls=[
@@ -338,7 +338,7 @@ class PainelHabitos:
         return ft.Container(
             padding=ft.Padding(left=16, right=24, top=24, bottom=20),
             bgcolor=COR_SUPERFICIE,
-            border=ft.border.only(bottom=ft.border_side.BorderSide(1, COR_BORDA)),
+            border=ft.border.only(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Row(
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
