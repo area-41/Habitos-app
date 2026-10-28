@@ -4,7 +4,7 @@
 
 Aplicação web e interativa de acompanhamento e gestão de hábitos diários, construída em **Python** utilizando o framework **Flet**. 
 
-O projeto foi originalmente desenvolvido como um protótipo didático e posteriormente adaptado para **containerização com Docker e deploy contínuo em ambiente serverless/cloud no Render**.
+O projeto foi originalmente concebido pelo **Prof. Dr. Claiton de Oliveira** (UTFPR) como material prático de Front-end para a especialização *lato sensu* em **Python Avançado**, tendo recebido apenas algumas adaptações estruturais e de **containerização para suporte a deploy contínuo em ambiente serverless/cloud no Render**. 
 
 ---
 
