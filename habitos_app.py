@@ -340,7 +340,7 @@ class PainelHabitos:
             bgcolor=COR_SUPERFICIE,
             border=ft.border(bottom=ft.BorderSide(1, COR_BORDA)),
             content=ft.Row(
-                vertical_alignment=ft.CrossAxisAlignment.center,
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.IconButton(
                         icon=ft.icons.ARROW_BACK_IOS_NEW,
@@ -628,7 +628,7 @@ class PainelHabitos:
             border_radius=14,
             animate=ft.Animation(180, ft.AnimationCurve.EASE_OUT),
             content=ft.Row(
-                vertical_alignment=ft.CrossAxisAlignment.center,
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 spacing=12,
                 controls=[
                     # Bloco visual do ícone.
