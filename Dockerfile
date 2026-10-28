@@ -19,8 +19,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 5. Copia todo o restante do código do seu projeto para o servidor
 COPY . .
 
-# 6. Expõe a porta padrão que o contêiner vai escutar
-EXPOSE 7860
+# 6. Expõe a porta padrão do Render (10000)
+EXPOSE 10000
 
-# 7. Comando que inicia o app configurando o Flet para rodar na porta correta da nuvem
-CMD ["python", "habitos_app.py", "--port", "7860"]
+# 7. Comando que inicia o app
+CMD ["python", "habitos_app.py"]

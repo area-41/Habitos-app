@@ -22,7 +22,7 @@
 # Importamos a biblioteca Flet e damos a ela o apelido ft.
 # Esse apelido é uma convenção comum na documentação do Flet.
 import flet as ft
-
+import os
 # dataclass é usado para criar classes simples de dados
 from dataclasses import dataclass, field
 
@@ -744,4 +744,14 @@ def main(page: ft.Page):
 # uma aplicação desktop
 # ----------------------------------------------------------
 if __name__ == "__main__":
-    ft.run(main, view=ft.AppView.WEB_BROWSER, port=7860)
+    #ft.run(main, view=ft.AppView.WEB_BROWSER, port=7860)
+    # O Render injeta a porta na variável de ambiente PORT (padrão é 10000 se não encontrar)
+    port = int(os.environ.get("PORT", 10000))
+    
+    # Executa como servidor web acessível na nuvem
+    ft.app(
+        target=main,
+        view=None,  # Sem interface nativa/desktop, roda apenas via web server
+        port=port,
+        host="0.0.0.0"
+    )
