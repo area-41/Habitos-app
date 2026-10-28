@@ -388,7 +388,7 @@ class PainelHabitos:
                             controls=[self.coluna_habitos],
                         ),
                     ),
-                    ft.Button(
+                    ft.ElevatedButton(
                         content=ft.Text(
                             "+  Adicionar hábito",
                             size=15,
@@ -463,7 +463,7 @@ class PainelHabitos:
                     # Este Container expandido empurra o botão para baixo,
                     # ocupando o espaço livre entre o seletor e o botão.
                     ft.Container(expand=True),
-                    ft.Button(
+                    ft.ElevatedButton(
                         content=ft.Text(
                             "Salvar hábito",
                             size=15,
